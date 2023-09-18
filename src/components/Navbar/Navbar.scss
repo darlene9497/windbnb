@@ -1,11 +1,8 @@
-*{
-    font-family: 'Mulish', sans-serif;
-}
-
 .navbar{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    font-family: 'Mulish', sans-serif;
     padding: 20px 50px; /* padding to create space at the sides */
 
     .search-bar{
