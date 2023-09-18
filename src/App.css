@@ -1,3 +1,7 @@
-*{
-    font-family: 'Mulish', sans-serif;
+:root{
+    --border-color: #F2F2F2;
+    --text-color: #333333;
+    --light-grey-color: #BDBDBD;
+    --app-color: #EB5757;
+    --grey-color: #4F4F4F;
 }
