@@ -22,50 +22,63 @@
         }
     }
 
-    .img-container{
-        img{
-            object-fit: cover;
-            width: 395px;
-            height: 269px;
-            border-radius: 8%;
-            padding: 5px;
-        }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        margin: 0 20px;
+        padding: 0 0 0 30px;
 
-        .image-text{
+        .img-container{
             display: flex;
-            flex-direction: row;
-            margin-bottom: -10px;
-            
-            h4{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 25%;
-                text-transform: uppercase;
-                border: 1px solid var(--grey-color);
-                color: var(--grey-color);
-                border-radius: 50px;
-                margin: 5px;
-                font-weight: 700;
-                font-size: 12px;
+            flex-direction: column;
+        
+            img{
+                object-fit: cover;
+                width: 375px;
+                height: 250px;
+                border-radius: 10%;
             }
 
-            p{
-                font-size: 14px;
-                color: var(--grey-color-two);
-            }
-
-            .rating {
+            .image-text{
                 display: flex;
-                color: var(--app-color);
-                padding: 15px;
-                padding: 15px 0 0 45px; 
-            }    
+                flex-direction: row;
+                margin-bottom: -10px;
             
-            span{
-                font-size: 14px;
-                justify-content: flex-end;
-                padding: 15px 0 0 5px; 
+                h6{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    border: 1px solid var(--grey-color);
+                    color: var(--grey-color);
+                    border-radius: 50px;
+                    margin: 10px;
+                    padding: 8px;
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+                
+                p{
+                    font-size: 14px;
+                    color: var(--grey-color-two);
+                }
+                
+                .rating-container {
+                    display: flex;
+                    align-items: center; 
+                    padding: 15px;
+                    margin-left: auto;
+
+                .rating {
+                    color: var(--app-color);
+                    margin-right: 5px; /* spacing between rating and span */
+                }
+                
+                span {
+                    font-size: 14px;
+                    margin-right: 15px;
+                }
+            }
             }
         }
 
