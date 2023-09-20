@@ -3,12 +3,16 @@ import logo from '../assets/logo.png'
 import { BiSearchAlt2 } from'react-icons/bi'
 
 function Navbar() {
+  function onSearch() {
+    console.log('search')
+  }
+
   return (
     <div className='navbar'>
       <div className='logo'>
         <img src={logo} alt='' />
       </div>
-      <div className="search-bar">
+      <div onClick={onSearch} className="search-bar">
         <span className="location">
           Helsinki, Finland
         </span>
