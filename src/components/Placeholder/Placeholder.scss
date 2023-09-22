@@ -49,25 +49,28 @@
         border: 1px solid var(--text-color);
         border-radius: 20px;
     }    
+}
 
-    .location{
-        .location-list{
-            list-style: none;
-            font-size: 14px;
-            color: var(--grey-color);
-        }
-
-        .location-icon{
-            color: var(--grey-color);
-            padding: 15px 5px 0 0;
-        }
+.location-list{
+    position: absolute;
+    font-family: 'Mulish', sans-serif;
+    list-style: none;
+    font-size: 14px;
+    color: var(--grey-color);
+    cursor: pointer;
+    padding: 10px 160px;
+    line-height: 3rem;
+    
+    .location-icon{
+        color: var(--grey-color);
+        padding: 15px 5px 0 0;
     }
 }
 
 .add-guests{
     font-family: 'Mulish', sans-serif;
     font-size: 14px;
-    margin-left: 580px;
+    padding: 20px 580px;
 
     h4{
         color: var(--text-color);
@@ -80,6 +83,7 @@
         color: var(--light-grey-color);
         margin-top: 0;
         padding: 0 10px;
+        width: 100%;
     }
 
     button{
