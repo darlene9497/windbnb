@@ -59,6 +59,8 @@ function Placeholder() {
             setChildCount(childCount - 1);
         }
     };
+
+    const totalGuests =  adultCount + childCount;
     
     return (
     <div>
@@ -67,10 +69,21 @@ function Placeholder() {
             <h5>Location</h5>
             <span>{selectedLocation}</span>
         </div>
+
+        <>
+        {guests ? (
         <div className="guests" onClick={handleGuestClick}>
             <h5>Guests</h5>
-            <span>Add guests</span>        
+                {<span>{totalGuests} guests</span>}
+            </div>
+        ) : (
+        <div className="guests" onClick={handleGuestClick}>
+            <h5>Guests</h5>
+            <span>Add guests</span>
         </div>
+        )}      
+        </>
+        
         <div>
             <button className="search-button">
                 <BiSearchAlt2 className='icon' />Search
@@ -86,7 +99,7 @@ function Placeholder() {
             ))}
             </ul>
         )}
-        
+
         {guests && (
         <div className="add-guests">
         <div>
@@ -103,10 +116,10 @@ function Placeholder() {
             {childCount}
             <button onClick={incrementChildren}>+</button>
         </div>
+        </div>
+        )}
     </div>
-    )}
-</div>
-);
+    );
 }
 
 export default Placeholder;
