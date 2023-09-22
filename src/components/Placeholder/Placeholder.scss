@@ -11,7 +11,6 @@
         text-transform: uppercase;
         font-size: 9px;
         color: var(--text-color);
-        font-weight: 800;
         margin: 0;
     }
 
@@ -21,7 +20,7 @@
         margin: 0;
     }
 
-    button{
+    .search-button{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -50,4 +49,45 @@
         border: 1px solid var(--text-color);
         border-radius: 20px;
     }    
+
+    .location{
+        .location-list{
+            list-style: none;
+            font-size: 14px;
+            color: var(--grey-color);
+        }
+
+        .location-icon{
+            color: var(--grey-color);
+            padding: 15px 5px 0 0;
+        }
+    }
+}
+
+.add-guests{
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    margin-left: 580px;
+
+    h4{
+        color: var(--text-color);
+        margin-bottom: 0;
+        padding: 0 10px;
+    }
+
+    span{
+        display: block;
+        color: var(--light-grey-color);
+        margin-top: 0;
+        padding: 0 10px;
+    }
+
+    button{
+        margin: 10px;
+        color: var(--grey-color-two);
+        background-color: transparent;
+        border: 1px solid var(--grey-color-two);
+        font-size: 18px;
+        border-radius: 10%;
+    }
 }
