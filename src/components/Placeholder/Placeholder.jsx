@@ -64,23 +64,12 @@ function Placeholder() {
     <div>
     <div className="placeholder">
         <div className="location" onClick={handleLocationClick}>
-        <h5>Location</h5>
-        {showLocations ? (
-            <ul className="location-list">
-                {uniqueLocations.map((location) => (
-                <li key={location.city} onClick={() => handleLocationSelect(location)}>
-                    <FontAwesomeIcon icon={faLocationDot} className="location-icon" /> {location.city}, {location.country}
-                </li>
-            ))}
-            </ul>
-        ) : (
+            <h5>Location</h5>
             <span>{selectedLocation}</span>
-        )}
         </div>
         <div className="guests" onClick={handleGuestClick}>
             <h5>Guests</h5>
-            <span>Add guests</span>
-            
+            <span>Add guests</span>        
         </div>
         <div>
             <button className="search-button">
@@ -88,7 +77,17 @@ function Placeholder() {
             </button>
         </div>
     </div>
-    {guests && (
+        {showLocations && (
+            <ul className="location-list">
+                {uniqueLocations.map((location) => (
+                <li key={location.city} onClick={() => handleLocationSelect(location)}>
+                    <FontAwesomeIcon icon={faLocationDot} className="location-icon" /> {location.city}, {location.country}
+                </li>
+            ))}
+            </ul>
+        )}
+        
+        {guests && (
         <div className="add-guests">
         <div>
             <h4>Adults</h4>
