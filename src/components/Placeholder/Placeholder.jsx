@@ -61,6 +61,21 @@ function Placeholder() {
     };
 
     const totalGuests =  adultCount + childCount;
+
+    const searchLocations = () => {
+        const filteredLocations = locations.filter((location) => {
+
+            const cityMatch = location.city.toLowerCase() === selectedLocation.toLowerCase();
+    
+            const maxGuestsMatch = location.maxGuests >= totalGuests;
+    
+            return cityMatch && maxGuestsMatch;
+        });
+
+        console.log (filteredLocations);
+    }
+    
+    
     
     return (
     <div>
@@ -85,7 +100,7 @@ function Placeholder() {
         </>
         
         <div>
-            <button className="search-button">
+            <button className="search-button" onClick={searchLocations}>
                 <BiSearchAlt2 className='icon' />Search
             </button>
         </div>
