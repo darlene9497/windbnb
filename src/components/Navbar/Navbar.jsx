@@ -21,7 +21,11 @@ function Navbar() {
         <span className="guests">Add guests</span>
         <BiSearchAlt2 className="search-icon" />
       </div>
-      {showPlaceholder && <div className="blurred-background"><Placeholder /></div>}
+      {showPlaceholder && <div className="blurred-background">
+          <div className="content">
+            <Placeholder onSearchClick={handleSearchClick} />
+          </div>
+      </div>}
     </div>
   )
 }

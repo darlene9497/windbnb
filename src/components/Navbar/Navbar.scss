@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     font-family: 'Mulish', sans-serif;
-    padding: 20px 50px; /* padding to create space at the sides */
+    padding: 20px 50px;
 
     .search-bar{
         width: 300px;
@@ -13,6 +13,7 @@
         border: 1px solid var(--border-color); 
         border-radius: 50px;
         padding: 10px;
+        cursor: pointer;
 
         .location,
         .guests {
@@ -36,20 +37,21 @@
             color: var(--app-color);
         }
     }
+    
+    .blurred-background {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, white 50%, transparent 50%); 
+        backdrop-filter: blur(2px);
+        z-index: 999; 
 
-    /* Placeholder.scss */
-.blurred-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9); /* White background with some opacity */
-    backdrop-filter: blur(8px); /* Apply the blur effect */
-    z-index: 999; /* Ensure it's above other elements */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+        .content{
+            position: absolute;
+            top: 40px;
+            width: 100%;
+        }
+    }
 }

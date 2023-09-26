@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
-function Placeholder() {
+function Placeholder({ onSearchClick }) {
     const [showLocations, setShowLocations] = useState(false);
     const [selectedLocation, setSelectedLocation] = useState('Add location');
     const [locations, setLocations] = useState([]);
@@ -74,8 +74,13 @@ function Placeholder() {
 
         console.log (filteredLocations);
     }
-    
-    
+
+    const handleSearchClick = () => {
+        if (onSearchClick) {
+            onSearchClick();
+        }
+        searchLocations();
+    };
     
     return (
     <div>
@@ -100,7 +105,7 @@ function Placeholder() {
         </>
         
         <div>
-            <button className="search-button" onClick={searchLocations}>
+            <button className="search-button" onClick={handleSearchClick}>
                 <BiSearchAlt2 className='icon' />Search
             </button>
         </div>
