@@ -49,6 +49,18 @@
         border: 1px solid var(--text-color);
         border-radius: 20px;
     }    
+
+    @media screen and (max-width: 768px){
+        padding: 0 100px 0 50px;
+    }
+
+    @media screen and (max-width: 360px){
+        padding: 0 10px 0 15px;
+
+        .search-button{
+            width: 100%;
+        }
+    }
 }
 
 .location-list{
@@ -65,12 +77,23 @@
         color: var(--grey-color);
         padding: 15px 5px 0 0;
     }
+
+    @media screen and (max-width: 768px){
+        padding: 0 60px;
+        line-height: 1.5em;
+    }
+
+    @media screen and (max-width: 360px){
+        padding: 0 10px;
+        line-height: 1.5em;
+        font-size: 12px;
+    }
 }
 
 .add-guests{
     font-family: 'Mulish', sans-serif;
     font-size: 14px;
-    padding: 20px 580px;
+    margin-left: 45%;
 
     h4{
         color: var(--text-color);
@@ -93,5 +116,29 @@
         border: 1px solid var(--grey-color-two);
         font-size: 18px;
         border-radius: 10%;
+    }
+
+    @media screen and (max-width: 768px){
+        margin-left: 310px;
+        margin-top: 25px;
+        font-size: 12px;
+
+        button{
+            font-size: 14px;
+            margin: 3px 5px; 
+            margin-left: 10px;
+        }
+    }
+
+    @media screen and (max-width: 360px){
+        margin-left: 140px;
+        margin-top: 25px;
+        font-size: 10px;
+
+        button{
+            font-size: 14px;
+            margin: 1px 5px; 
+            margin-left: 10px;
+        }
     }
 }
